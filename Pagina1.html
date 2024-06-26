@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafana Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .grafana-iframe {
+            border: none;
+            width: 1000px;
+            height: 600px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: 20px;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo-claro-4096.png" alt="logo-claro-4096.png" class="logo">
+        <h1>Grafana Dashboard</h1>
+    </header>
+    <div class="container">
+        <h3>Comparacion Movil Semana Pasada</h3>
+        <iframe class="grafana-iframe" src="http://10.59.35.176:8081/d/b6eeb746-79fe-4abe-b007-ccca27320e49/comparacion-semanas-movil-2?orgId=1&var-responsable0=All&var-ESTADO0=All&refresh=5m&from=1718705400784&to=1718727000784"></iframe>
+        </div>
+        <center>
+        <h3 style="color: black;">Dashboard Movil</h3>
+        </center>
+        <div class="container">
+        <iframe class="grafana-iframe" src="http://10.59.35.176:8081/d/ca71f78e-b9ba-4462-8dfb-4b1604154f2f/dashboard-movil?orgId=1&var-Regional0=R1&var-Regional0=R2&var-Regional0=R3&var-Regional0=R4&var-Regional0=R5&var-responsable0=All&var-Estado=Dise%C3%B1o&from=1718955512957&to=1718977112957"></iframe>
+        <iframe class="grafana-iframe" src="https://your-grafana-instance.com/d-solo/your-dashboard-uid/your-panel-uid3?orgId=1&refresh=5m"></iframe>
+        <!-- Añade más iframes según sea necesario -->
+    </div>
+</body>
+</html>
